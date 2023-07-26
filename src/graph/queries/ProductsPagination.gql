@@ -1,0 +1,46 @@
+query ProductsPagination($after: String, $perPage: Int, $sortBy: ProductOrder) {
+  products(channel: "uk", first: $perPage, after: $after, sortBy: $sortBy) {
+    pageInfo {
+      startCursor
+      endCursor
+    }
+    edges {
+      cursor
+      node {
+        id
+        name
+        slug
+        media {
+          id
+          type
+          alt
+          oembedData
+          url(size:400, format: WEBP)
+        }
+        seoTitle
+        seoDescription
+        isAvailableForPurchase
+        pricing {
+          onSale
+          priceRange {
+            start {
+              currency
+              gross {
+                currency
+                amount
+              }
+            }
+            stop {
+              currency
+              gross {
+                currency
+                amount
+              }
+            }
+          }
+        }
+      }
+    }
+    totalCount
+  }
+}

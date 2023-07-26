@@ -1,13 +1,6 @@
-import {ProductCardProps} from "@/components/Products/ProductCard/ProductCard.types";
-import {memo} from "react";
+import {Products} from "@/types/Products";
 
 
-function ProductCardList({products}: ProductCardListProps) {
-    console.log('yup')
-    return (
-        <div>{product.node.name}</div>
-    )
+export type ProductCardListProps = {
+    products: Products
 }
-
-
-export default memo(ProductCard)

@@ -1,1 +1,2 @@
 schema: https://unicorn-staging.eu.saleor.cloud/graphql/
+documents: '**/*.gql'

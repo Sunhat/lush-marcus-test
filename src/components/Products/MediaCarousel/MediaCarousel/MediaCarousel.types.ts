@@ -1,6 +1,6 @@
 import {ProductMedia} from "@/types/Products";
 
 
-export type ProductMediaCarouselProps = {
+export type MediaCarouselProps = {
     media: ProductMedia[]
 }

@@ -1,14 +1,24 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {ProductMediaCarouselProps} from "@/components/Products/ProductMediaCarousel/ProductMediaCarousel.types";
+import {MediaCarouselProps} from "@/components/Products/MediaCarousel/MediaCarousel/MediaCarousel.types";
+import MediaCarouselItem from "@/components/Products/MediaCarousel/MediaCarouselItem/MediaCarouselItem";
+import {memo} from "react";
 
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-export default function ProductMediaCarousel({media}: ProductMediaCarouselProps) {
+function MediaCarousel({media}: MediaCarouselProps) {
     return <Swiper
+        pagination={{
+            enabled: true,
+            type: 'bullets',
+        }}
         spaceBetween={50}
-        slidesPerView={3}
+        slidesPerView={1}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
     >
-        <SwiperSlide>Slide 1</SwiperSlide>
+        {media.map((mediaItem) => <SwiperSlide key={mediaItem.id}><MediaCarouselItem item={mediaItem} /></SwiperSlide>)}
     </Swiper>
 }
+
+export default memo(MediaCarousel)

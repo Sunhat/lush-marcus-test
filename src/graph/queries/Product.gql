@@ -1,0 +1,47 @@
+query Product($slug: String) {
+    product(slug: $slug, channel: "uk") {
+        id
+        name
+        slug
+        media {
+            id
+            type
+            alt
+            oembedData
+            url(size:500, format: WEBP)
+        }
+        isAvailable
+        rating
+        description
+        weight {
+            unit
+            value
+        }
+        category {
+            id
+            name
+        }
+        seoTitle
+        seoDescription
+        isAvailableForPurchase
+        pricing {
+            onSale
+            priceRange {
+                start {
+                    currency
+                    gross {
+                        currency
+                        amount
+                    }
+                }
+                stop {
+                    currency
+                    gross {
+                        currency
+                        amount
+                    }
+                }
+            }
+        }
+    }
+}
