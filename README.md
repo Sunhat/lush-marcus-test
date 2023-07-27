@@ -29,3 +29,4 @@ Additional considerations, what would I add if I had more time, etc
 - Mobile responsive for product page
 - Read into next/image further, potentially use `<Image>` instead or srcset for different screens
 - Replace inline styling with module.css
+- Use css vars
