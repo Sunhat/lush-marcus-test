@@ -24,5 +24,6 @@ Additional considerations, what would I add if I had more time, etc
 
 - General tidy-ups, move types to different files/folders, better focus on naming
 - Add better UI for sorting and managing content
+- Add Lush product categories to click on across a horizontally scrollable area
 - More detail, description, and usages of seoTitle, and seoDescription in the metadata for the page
-- 
+- Mobile responsive for product page
