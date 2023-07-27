@@ -28,3 +28,4 @@ Additional considerations, what would I add if I had more time, etc
 - More detail, description, and usages of seoTitle, and seoDescription in the metadata for the page
 - Mobile responsive for product page
 - Read into next/image further, potentially use `<Image>` instead or srcset for different screens
+- Replace inline styling with module.css
