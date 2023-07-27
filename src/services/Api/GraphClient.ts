@@ -9,7 +9,6 @@ import {ProductOrder} from "@/types/Products";
 const GraphClient = new (class extends Client {
 
     async productsPaginated(after?: string, perPage: number = 50, {sortBy}: {sortBy?: ProductOrder} = {}): Promise<ProductsPaginatedResults> {
-        console.log(sortBy)
         const response = await client.query({
             query: ProductsPagination,
             variables: {
